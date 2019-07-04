@@ -50,6 +50,7 @@ GO_CLEAN := $(GO) clean
 # Ginkgo Config
 ################################################################################
 GINKGO_TEST ?= $(GINKGO) -r --randomizeAllSpecs --randomizeSuites --failOnPending --trace --race --progress --compilers=2
+GINKGO_TEST_WATCH ?= $(GINKGO) watch -r --randomizeAllSpecs --failOnPending --trace --race --progress --compilers=2
 GINKGO_TEST_COVER ?= $(GINKGO) -r --randomizeAllSpecs --randomizeSuites --failOnPending --cover --trace --race --progress --compilers=2 -outputdir=$(COVER_DIR) -coverprofile=cover.coverprofile
 
 ################################################################################
